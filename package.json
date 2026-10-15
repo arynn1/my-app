@@ -1,0 +1,36 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "module": "index.ts",
+  "author": "Romero, Ryan Nicolas, M.",
+  "description": "String Reverser App",
+  "main": "main.js",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/figlet": "^1.7.0",
+    "electron": "^44.7.2",
+    "electron-builder": "^26.15.3"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.stringreverser.app",
+    "productName": "StringReverser",
+    "win": {
+      "target": "portable"
+    },
+    "files": [
+      "assets/**/*",
+      "main.js"
+    ]
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "figlet": "^1.12.0"
+  }
+}

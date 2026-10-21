@@ -10,10 +10,6 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: #050805;
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 50%),
-    linear-gradient(90deg, rgba(0, 255, 65, 0.03), rgba(0, 0, 0, 0.01));
-  background-size: 100% 4px, 6px 100%;
   font-family: "Courier New", Courier, "Lucida Console", monospace;
   color: #00ff66;
 }
@@ -23,26 +19,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-
-#credits {
-  margin-top: 14px;
-  text-align: center;
-  opacity: 0.75;
-}
-
-#credits p {
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: none;
-  color: #00cc55;
-  text-shadow: none;
-  margin-bottom: 4px;
-}
-
-#credits p::before {
-  content: "";
 }
 
 #container {
@@ -77,11 +53,6 @@ p {
   text-shadow: 0 0 6px rgba(0, 255, 102, 0.6);
 }
 
-p::before {
-  content: ">> ";
-  color: #55ff99;
-}
-
 input[type="text"] {
   width: 100%;
   padding: 12px 14px;
@@ -103,13 +74,10 @@ input[type="text"]:focus {
 
 input[readonly] {
   background-color: #031005;
-  border: 1px dashed #00b341;
+  border-style: dashed;
+  border-color: #00b341;
   color: #33ff85;
   cursor: pointer;
-}
-
-input[readonly]:focus {
-  box-shadow: 0 0 8px rgba(51, 255, 133, 0.35);
 }
 
 .input-wrapper {
@@ -137,13 +105,13 @@ input[readonly]:focus {
   font-family: inherit;
   font-size: 15px;
   padding: 8px;
+  text-shadow: none;
+  box-shadow: none;
 }
 
 #copy-btn {
   width: 34px;
   height: 34px;
-  min-width: 34px;
-  min-height: 34px;
   flex: 0 0 34px;
   display: inline-flex;
   align-items: center;
@@ -215,4 +183,20 @@ input[readonly]:focus {
   background-color: #003311;
   color: #00ff66;
   border-color: #00cc44;
+}
+
+#credits {
+  margin-top: 14px;
+  text-align: center;
+  opacity: 0.75;
+}
+
+#credits p {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  color: #00cc55;
+  text-shadow: none;
+  margin-bottom: 4px;
 }

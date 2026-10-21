@@ -8,6 +8,14 @@ function reverseString(string){
     return [...string].reverse().join('');
 }
 
+function reverseEachWord(string){
+    let words = string.split(" ");
+    for(let i = 0; i < words.length; i++){
+        words[i] = reverseString(words[i]);
+    }
+    return [...words].join(" ");
+}
+
 function copyText() {
     if (!outputField.value) return;
     navigator.clipboard.writeText(outputField.value);
@@ -16,7 +24,7 @@ function copyText() {
 copyBtn.addEventListener('click', () => copyText());
 
 convertBtn.addEventListener('click', () => {
-    outputField.value = reverseString(inputField.value);
+    outputField.value = reverseEachWord(inputField.value);
 });
 
 resetBtn.addEventListener('click', ()=> {
